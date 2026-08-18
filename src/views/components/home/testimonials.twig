@@ -1,11 +1,7 @@
-{#
-| Variable           | Type                      | Description                         |
-|--------------------|---------------------------|-------------------------------------|
-| limit              | string                    | Maximum number of the testimonials  |
-| type               | string                    | `default:store` all, product, store |
-| sort               | string                    |                                     |
-| hide_customer_info | bool                      | show/hide info customers            |
-#}
-<section data-testid="store-home-testimonials" class="s-block s-block--testimonials container overflow-hidden">
-    <salla-reviews {{ display_all_url ? "display-all-link" : "" }} limit="{{ limit }}" sort="{{ sort }}" {{ hide_customer_info ? 'hide-customer-info' : '' }} type="{{type}}"></salla-reviews>
-</section> 
+<div
+    id="b6b-official-payload-probe"
+    data-payload-type="{{ type }}"
+    data-global-store="{{ store.name }}"
+>
+    B6B_OFFICIAL_PAYLOAD={{ type }}
+</div>
